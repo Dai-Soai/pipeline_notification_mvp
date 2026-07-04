@@ -1,0 +1,40 @@
+{
+  "pipeline_id": "pipeline-demo-001",
+  "status": "completed",
+  "generated_at": "2026-07-04T20:00:00Z",
+  "results": [
+    {
+      "node_id": "notify",
+      "success": true,
+      "started_at": "2026-07-04T20:00:01Z",
+      "finished_at": "2026-07-04T20:00:01Z",
+      "duration_ms": 1,
+      "message": "notify",
+      "metadata": {
+        "command": "echo notify",
+        "exit_code": 0
+      }
+    },
+    {
+      "node_id": "execute",
+      "success": true,
+      "started_at": "2026-07-04T20:00:02Z",
+      "finished_at": "2026-07-04T20:00:02Z",
+      "duration_ms": 1,
+      "message": "execute",
+      "metadata": {
+        "command": "echo execute",
+        "exit_code": 0
+      }
+    }
+  ],
+  "summary": {
+    "total_results": 2,
+    "successful_results": 2,
+    "failed_results": 0,
+    "success_rate": 1.0
+  },
+  "metadata": {
+    "source": "pipeline_executor"
+  }
+}
