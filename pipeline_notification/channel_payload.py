@@ -55,8 +55,14 @@ def build_channel_payloads(
 def get_payload_summary(payloads: list[ChannelPayload]) -> dict[str, int]:
     return {
         "total_payloads": len(payloads),
-        "console_payloads": sum(1 for payload in payloads if payload.channel == "console"),
-        "telegram_payloads": sum(1 for payload in payloads if payload.channel == "telegram"),
-        "webhook_payloads": sum(1 for payload in payloads if payload.channel == "webhook"),
+        "console_payloads": sum(
+            1 for payload in payloads if payload.channel == "console"
+        ),
+        "telegram_payloads": sum(
+            1 for payload in payloads if payload.channel == "telegram"
+        ),
+        "webhook_payloads": sum(
+            1 for payload in payloads if payload.channel == "webhook"
+        ),
         "email_payloads": sum(1 for payload in payloads if payload.channel == "email"),
     }

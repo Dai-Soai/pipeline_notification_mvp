@@ -48,7 +48,4 @@ def build_notification_message(event: NotificationEvent) -> NotificationMessage:
 def build_notification_messages(
     events: list[NotificationEvent],
 ) -> list[NotificationMessage]:
-    return [
-        build_notification_message(event)
-        for event in events
-    ]
+    return [build_notification_message(event) for event in events]

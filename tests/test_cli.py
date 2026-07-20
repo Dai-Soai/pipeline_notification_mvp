@@ -49,7 +49,9 @@ def test_cli_preview_outputs_notification(tmp_path, capsys):
 
 def test_cli_preview_failed_report(tmp_path, capsys):
     report_file = tmp_path / "execution_report.json"
-    report_file.write_text(json.dumps(sample_execution_report("failed")), encoding="utf-8")
+    report_file.write_text(
+        json.dumps(sample_execution_report("failed")), encoding="utf-8"
+    )
 
     exit_code = main(["preview", str(report_file)])
 

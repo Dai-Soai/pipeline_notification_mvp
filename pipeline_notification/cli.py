@@ -3,7 +3,10 @@ import sys
 
 from pipeline_notification.channel_payload import build_channel_payloads
 from pipeline_notification.classifier import classify_execution_report
-from pipeline_notification.loader import ExecutionReportLoaderError, load_execution_report
+from pipeline_notification.loader import (
+    ExecutionReportLoaderError,
+    load_execution_report,
+)
 from pipeline_notification.message_builder import build_notification_messages
 from pipeline_notification.report import (
     build_notification_report,

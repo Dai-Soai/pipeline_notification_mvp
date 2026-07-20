@@ -64,19 +64,25 @@ def test_determine_notification_report_status_empty():
 
 
 def test_determine_notification_report_status_ready():
-    assert determine_notification_report_status(
-        [make_event()],
-        [make_message()],
-        [make_payload()],
-    ) == "ready"
+    assert (
+        determine_notification_report_status(
+            [make_event()],
+            [make_message()],
+            [make_payload()],
+        )
+        == "ready"
+    )
 
 
 def test_determine_notification_report_status_invalid():
-    assert determine_notification_report_status(
-        [make_event()],
-        [],
-        [],
-    ) == "invalid"
+    assert (
+        determine_notification_report_status(
+            [make_event()],
+            [],
+            [],
+        )
+        == "invalid"
+    )
 
 
 def test_build_notification_report():

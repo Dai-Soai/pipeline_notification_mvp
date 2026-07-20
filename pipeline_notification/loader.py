@@ -20,7 +20,9 @@ def load_execution_report(file_path: str | Path) -> dict[str, Any]:
         with path.open("r", encoding="utf-8") as file:
             payload = json.load(file)
     except json.JSONDecodeError as error:
-        raise ExecutionReportLoaderError(f"invalid execution report JSON: {error}") from error
+        raise ExecutionReportLoaderError(
+            f"invalid execution report JSON: {error}"
+        ) from error
 
     if not isinstance(payload, dict):
         raise ExecutionReportLoaderError("execution report root must be a JSON object")

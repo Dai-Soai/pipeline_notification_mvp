@@ -45,11 +45,10 @@ def classify_execution_report(report: dict[str, Any]) -> NotificationEvent:
     )
 
 
-def classify_execution_reports(reports: list[dict[str, Any]]) -> list[NotificationEvent]:
-    return [
-        classify_execution_report(report)
-        for report in reports
-    ]
+def classify_execution_reports(
+    reports: list[dict[str, Any]],
+) -> list[NotificationEvent]:
+    return [classify_execution_report(report) for report in reports]
 
 
 def get_event_summary(events: list[NotificationEvent]) -> dict[str, Any]:
